@@ -1,0 +1,47 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter String\n");
+        String s=sc.nextLine();
+        String arr[]=s.split(" ");
+        int a[]=new int[arr.length];
+        
+        String [][]t=new String[arr.length][3];
+        int k=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=0;j<arr.length;j++)
+            {
+                if(arr[i].equals(arr[j]))
+                k++;
+            }
+          //   System.out.println(arr[i]+"  "+k);
+             t[i][0]=arr[i];
+             t[i][1]=Integer.toString(k);
+             t[i][2]=Integer.toString(0);
+             a[i]=0;
+              k=0;
+        }
+        
+        
+         for(int i=0;i<arr.length;i++)
+        {
+             if(a[i]==0)
+             {
+                 System.out.println(t[i][0]+"  "+t[i][1]);
+
+                   for(int j=i;j<arr.length;j++)
+                     { 
+                        if(t[i][0].equals(t[j][0]))
+                            { 
+                                a[j]=1;
+                                // System.out.println(t[j][0]+i);
+                            }
+                    }
+             } 
+              
+        }
+       
+    }
+}
