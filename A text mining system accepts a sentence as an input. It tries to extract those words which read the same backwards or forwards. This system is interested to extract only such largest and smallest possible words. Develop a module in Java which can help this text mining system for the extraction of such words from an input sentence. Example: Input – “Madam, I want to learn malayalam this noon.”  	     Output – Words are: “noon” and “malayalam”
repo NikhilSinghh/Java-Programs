@@ -1,6 +1,6 @@
 import java.util.Scanner; 
 class Main { 
-     
+
     static boolean isPel(String s) 
     { 
         int k=0,f=1; 
@@ -13,20 +13,20 @@ class Main {
                 f=0; 
             } 
         } 
-         
+
         return f==1; 
         } 
         else return f==0; 
-         
+
     } 
-     
+
     public static void main(String[] args) { 
         System.out.println("Enter String"); 
         Scanner sc=new Scanner(System.in); 
         String s=sc.nextLine(); 
         String[] s1=s.split("\\s"); 
         String[] t=new String[s1.length]; 
-         
+
         int k=0; 
         for(int i=0; i < s1.length; i++) 
         { 
@@ -35,30 +35,30 @@ class Main {
                 t[k++]=s1[i]; 
             } 
         } 
-        int large=Integer.MIN_VALUE; 
+       
         String min="dffdggbcgcggnbcnbcnbcfoijadifdicnubvudbCZXOna",max="z"; 
-        
+
         for(int i=0; i < k; i++) 
         { 
             if(t[i].length()>max.length()) 
              max=t[i]; 
-             
+
         } 
-         
-         
-       
-        
+
+
+
+
         for(int i=0; i < k; i++) 
         { 
             if(t[i].length()<min.length()) 
              min=t[i]; 
-             
+
         } 
-        
-        System.out.println(" min pel is  "+min+ "  min:: " +min ); 
-        System.out.println(" min pel is  "+max+ "  max:: " +max ); 
- 
-         
- 
+
+        System.out.println(" Smallest pelindrome is  "+min+ "  ); 
+        System.out.println(" Largest pelindrome is  "+max+ "  ); 
+
+
+
     } 
 }
