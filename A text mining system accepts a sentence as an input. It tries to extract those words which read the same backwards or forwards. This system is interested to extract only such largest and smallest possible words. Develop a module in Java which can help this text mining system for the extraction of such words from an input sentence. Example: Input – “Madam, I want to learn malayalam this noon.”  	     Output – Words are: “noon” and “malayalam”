@@ -55,8 +55,8 @@ class Main {
 
         } 
 
-        System.out.println(" Smallest pelindrome is  "+min+ "  ); 
-        System.out.println(" Largest pelindrome is  "+max+ "  ); 
+        System.out.println(" Smallest pelindrome is  "+min  ); 
+        System.out.println(" Largest pelindrome is  "+max ); 
 
 
 
