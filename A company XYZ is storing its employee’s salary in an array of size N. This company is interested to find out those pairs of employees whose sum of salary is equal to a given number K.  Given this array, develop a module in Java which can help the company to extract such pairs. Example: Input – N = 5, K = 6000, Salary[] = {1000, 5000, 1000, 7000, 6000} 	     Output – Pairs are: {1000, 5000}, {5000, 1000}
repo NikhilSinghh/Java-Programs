@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class Main {
+    public static void findPairs(int[] salary, int targetSum) {
+        
+        for (int i = 0; i < salary.length; i++)
+        {
+           for(int j=i+1; j<salary.length-1; j++)
+            if (salary[i]+salary[j]==targetSum)
+            {
+                System.out.println("Pair: {" + salary[i] + ", " + salary[j] + "}");
+            }
+            
+        }
+    }
+
+    public static void main(String[] args) {
+        
+        System.out.println("Enetr number of Employess");
+        
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] salary = new int[n];
+        for(int i=0;i<n;i++)
+        {
+             System.out.println("Enetr Salaray of "+i+1+" Employee ");
+        salary[i]=sc.nextInt();
+        }
+        int targetSum;
+        
+             System.out.println("Enetr Target ");
+             targetSum=sc.nextInt();
+        findPairs(salary, targetSum);
+    }
+}
