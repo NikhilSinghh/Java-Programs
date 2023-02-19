@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Enetr the Meal");
+        int n=sc.nextInt();
+       float amount =44.5f*n;
+        float tax=(6.75f/100)*amount;
+        float totalAmount=tax+amount;
+        float tip=(15f/100)*totalAmount;
+System.out.println("Cost of per meal is Rs. 44.50 so your total Amount without any tax is "+ amount +
+                     "\ntax is "+ tax + 
+                     "\nTip is "+ tip+ 
+                     "\ntotal amount after adding adding all is "+ (amount+tip+tax));
+
+            
+    }
+}
