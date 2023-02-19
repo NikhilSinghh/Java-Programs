@@ -1,0 +1,65 @@
+#include<iostream>
+using namespace std;
+
+class stack{
+    public:
+int arr[5];
+int top=0;
+stack(){
+//arr=new int[3];
+}
+void push(int x){
+    
+if(top==5){
+cout<<"Stack overflow"<<endl;
+return;
+}
+//top++;
+arr[top]=x;
+top++;
+
+}
+
+void pop(){
+if(top==-1){
+
+cout<<"Stack is empty"<<endl;
+return;
+}
+top--;
+}
+
+void stTop(){
+if(top==-1){
+cout<<"Empty Stack"<<endl;
+return ;
+
+}
+//return arr[top];
+for(int i=0;i<top;i++)
+ cout<<arr[i]<<" ";
+}
+
+
+};
+
+
+int main(){
+stack st;
+st.push(1);
+st.push(2);
+st.push(3);
+st.push(4);
+st.push(23);
+st.stTop();
+st.pop();
+cout<<endl;
+st.stTop();
+st.pop();
+cout<<endl;
+st.stTop();
+st.push(563);
+cout<<endl;
+st.stTop();
+return 0;
+}
